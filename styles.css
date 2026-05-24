@@ -1,0 +1,156 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#fff7ef;
+color:#222;
+}
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+color:white;
+padding:20px;
+}
+
+.overlay h1{
+font-size:4rem;
+margin-bottom:10px;
+}
+
+.overlay p{
+font-size:1.3rem;
+margin-bottom:20px;
+}
+
+.auth-box{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:300px;
+margin:auto;
+}
+
+.auth-box input{
+padding:12px;
+border:none;
+border-radius:10px;
+}
+
+.auth-box button,
+.btn,
+.search-section button,
+.product button,
+.payment button{
+padding:12px;
+border:none;
+border-radius:10px;
+background:#ff8800;
+color:white;
+font-weight:bold;
+cursor:pointer;
+margin-top:10px;
+}
+
+.dashboard,
+.market,
+.search-section,
+.payment{
+padding:50px 20px;
+}
+
+.dashboard h2,
+.market h2,
+.search-section h2,
+.payment h2{
+text-align:center;
+margin-bottom:30px;
+color:#ff7b00;
+font-size:2.2rem;
+}
+
+.welcome-card{
+background:white;
+padding:20px;
+border-radius:15px;
+max-width:600px;
+margin:0 auto 30px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.grid,
+.catalog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card,
+.product,
+.payment-box{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card h3,
+.product h3{
+color:#ff7b00;
+margin-bottom:10px;
+}
+
+.cart{
+margin-top:30px;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.search-section{
+text-align:center;
+}
+
+.search-section input{
+padding:12px;
+width:80%;
+max-width:400px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+.payment-box{
+max-width:500px;
+margin:auto;
+text-align:center;
+}
+
+.payment-box ul{
+list-style:none;
+margin:20px 0;
+}
+
+.payment-box li{
+margin-bottom:10px;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}

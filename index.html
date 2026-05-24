@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KUKU Poultry App</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+<div class="overlay">
+<h1>🐔 KUKU Poultry App</h1>
+<p>Complete Poultry Management & Marketplace System</p>
+
+<div class="auth-box">
+<input type="text" id="username" placeholder="Create Username">
+<input type="password" id="password" placeholder="Create Password">
+<button onclick="createAccount()">Create Account</button>
+<button onclick="login()">Login</button>
+</div>
+
+<a href="#dashboard" class="btn">Open Dashboard</a>
+</div>
+</header>
+
+<section id="dashboard" class="dashboard">
+<h2>User Dashboard</h2>
+
+<div class="welcome-card">
+<h3 id="welcomeText">No user logged in</h3>
+<p>Your poultry management platform.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>🥚 Incubation</h3>
+<p>Track eggs and hatchery cycles.</p>
+</div>
+
+<div class="card">
+<h3>🐥 Farmers</h3>
+<p>Manage poultry batches and growth.</p>
+</div>
+
+<div class="card">
+<h3>💉 Veterinary</h3>
+<p>Vaccination and treatment tracking.</p>
+</div>
+
+<div class="card">
+<h3>🌽 Feed Suppliers</h3>
+<p>Manage feed inventory and suppliers.</p>
+</div>
+
+<div class="card">
+<h3>🛒 Marketplace</h3>
+<p>Buy eggs, chickens and poultry products.</p>
+</div>
+
+<div class="card">
+<h3>📦 User Catalog</h3>
+<p>Each user has their own purchase catalog.</p>
+</div>
+
+</div>
+</section>
+
+<section class="market">
+<h2>Marketplace Catalog</h2>
+
+<div class="catalog-grid">
+
+<div class="product">
+<h3>Tray of Eggs</h3>
+<p>$5</p>
+<button onclick="addToCart('Tray of Eggs')">Add to Cart</button>
+</div>
+
+<div class="product">
+<h3>Broiler Chicken</h3>
+<p>$10</p>
+<button onclick="addToCart('Broiler Chicken')">Add to Cart</button>
+</div>
+
+<div class="product">
+<h3>Chicken Feed</h3>
+<p>$20</p>
+<button onclick="addToCart('Chicken Feed')">Add to Cart</button>
+</div>
+
+</div>
+
+<div class="cart">
+<h3>🛒 My Catalog / Cart</h3>
+<ul id="cartItems"></ul>
+</div>
+</section>
+
+<section class="search-section">
+<h2>Google Poultry Search</h2>
+
+<input type="text" id="searchInput" placeholder="Search poultry topics">
+<button onclick="googleSearch()">Search on Google</button>
+</section>
+
+<section class="payment">
+<h2>Future Mobile Money Integration</h2>
+<div class="payment-box">
+<p>Prepared for:</p>
+<ul>
+<li>MTN Mobile Money</li>
+<li>Airtel Money</li>
+<li>Visa Payments</li>
+<li>Bank Transfers</li>
+</ul>
+<button disabled>Mobile Money Coming Soon</button>
+</div>
+</section>
+
+<footer>
+<p>© 2026 KUKU Poultry App Coursework Project</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
