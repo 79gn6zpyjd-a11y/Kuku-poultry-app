@@ -1,129 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#ff8c00">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KUKU Poultry App</title>
-<link rel="stylesheet" href="styles.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KUKU Poultry App</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#ff8c00">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header class="hero">
-<div class="overlay">
-<h1>🐔 KUKU Poultry App</h1>
-<p>Complete Poultry Management & Marketplace System</p>
+  <!-- HERO SECTION -->
+  <header class="hero">
 
-<div class="auth-box">
-<input type="text" id="username" placeholder="Create Username">
-<input type="password" id="password" placeholder="Create Password">
-<button onclick="createAccount()">Create Account</button>
-<button onclick="login()">Login</button>
-</div>
+    <div class="overlay">
 
-<a href="#dashboard" class="btn">Open Dashboard</a>
-</div>
-</header>
+      <h1>🐔 KUKU Poultry App</h1>
 
-<section id="dashboard" class="dashboard">
-<h2>User Dashboard</h2>
+      <p class="subtitle">
+        Complete Poultry Management & Marketplace System
+      </p>
 
-<div class="welcome-card">
-<h3 id="welcomeText">No user logged in</h3>
-<p>Your poultry management platform.</p>
-</div>
+      <!-- LOGIN -->
+      <div class="auth-box">
 
-<div class="grid">
+        <input
+          type="text"
+          id="username"
+          placeholder="Create Username"
+        >
 
-<div class="card">
-<h3>🥚 Incubation</h3>
-<p>Track eggs and hatchery cycles.</p>
-</div>
+        <input
+          type="password"
+          id="password"
+          placeholder="Create Password"
+        >
 
-<div class="card">
-<h3>🐥 Farmers</h3>
-<p>Manage poultry batches and growth.</p>
-</div>
+        <button onclick="createAccount()">
+          Create Account
+        </button>
 
-<div class="card">
-<h3>💉 Veterinary</h3>
-<p>Vaccination and treatment tracking.</p>
-</div>
+        <button onclick="login()">
+          Login
+        </button>
 
-<div class="card">
-<h3>🌽 Feed Suppliers</h3>
-<p>Manage feed inventory and suppliers.</p>
-</div>
+      </div>
 
-<div class="card">
-<h3>🛒 Marketplace</h3>
-<p>Buy eggs, chickens and poultry products.</p>
-</div>
+      <a href="#dashboard" class="dashboard-link">
+        Open Dashboard
+      </a>
 
-<div class="card">
-<h3>📦 User Catalog</h3>
-<p>Each user has their own purchase catalog.</p>
-</div>
+    </div>
 
-</div>
-</section>
+  </header>
 
-<section class="market">
-<h2>Marketplace Catalog</h2>
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="dashboard">
 
-<div class="catalog-grid">
+    <h2>KUKU Dashboard</h2>
 
-<div class="product">
-<h3>Tray of Eggs</h3>
-<p>$5</p>
-<button onclick="addToCart('Tray of Eggs')">Add to Cart</button>
-</div>
+    <div class="cards">
 
-<div class="product">
-<h3>Broiler Chicken</h3>
-<p>$10</p>
-<button onclick="addToCart('Broiler Chicken')">Add to Cart</button>
-</div>
+      <div class="card">
+        <h3>🐣 Hatchery Management</h3>
+        <p>
+          Monitor eggs, chicks, incubation,
+          and hatchery production.
+        </p>
+      </div>
 
-<div class="product">
-<h3>Chicken Feed</h3>
-<p>$20</p>
-<button onclick="addToCart('Chicken Feed')">Add to Cart</button>
-</div>
+      <div class="card">
+        <h3>💊 Veterinary Records</h3>
+        <p>
+          Store vaccination schedules,
+          poultry treatments, and disease records.
+        </p>
+      </div>
 
-</div>
+      <div class="card">
+        <h3>🌽 Feed Supplier System</h3>
+        <p>
+          Manage feeds, suppliers,
+          delivery schedules, and stock.
+        </p>
+      </div>
 
-<div class="cart">
-<h3>🛒 My Catalog / Cart</h3>
-<ul id="cartItems"></ul>
-</div>
-</section>
+      <div class="card">
+        <h3>🛒 Poultry Marketplace</h3>
+        <p>
+          Buy and sell chickens,
+          eggs, feeds, and farming equipment.
+        </p>
+      </div>
 
-<section class="search-section">
-<h2>Google Poultry Search</h2>
+    </div>
 
-<input type="text" id="searchInput" placeholder="Search poultry topics">
-<button onclick="googleSearch()">Search on Google</button>
-</section>
+  </section>
 
-<section class="payment">
-<h2>Future Mobile Money Integration</h2>
-<div class="payment-box">
-<p>Prepared for:</p>
-<ul>
-<li>MTN Mobile Money</li>
-<li>Airtel Money</li>
-<li>Visa Payments</li>
-<li>Bank Transfers</li>
-</ul>
-<button disabled>Mobile Money Coming Soon</button>
-</div>
-</section>
+  <!-- MARKETPLACE -->
+  <section class="marketplace">
 
-<footer>
-<p>© 2026 KUKU Poultry App Coursework Project</p>
-</footer>
+    <h2>Marketplace Products</h2>
 
-<script src="app.js"></script>
+    <div class="market-grid">
+
+      <div class="product-card">
+        <h3>🐓 Broiler Chickens</h3>
+        <p>Healthy broilers ready for sale.</p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <h3>🥚 Fresh Eggs</h3>
+        <p>Organic eggs directly from the farm.</p>
+        <button>Order</button>
+      </div>
+
+      <div class="product-card">
+        <h3>🌽 Poultry Feed</h3>
+        <p>High quality nutrition for poultry.</p>
+        <button>Purchase</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+
+    <h2>Application Features</h2>
+
+    <ul>
+
+      <li>✅ User Accounts</li>
+
+      <li>✅ Secure Login System</li>
+
+      <li>✅ Poultry Dashboard</li>
+
+      <li>✅ Hatchery Tracking</li>
+
+      <li>✅ Veterinary Management</li>
+
+      <li>✅ Feed Supplier System</li>
+
+      <li>✅ Poultry Marketplace</li>
+
+      <li>✅ Shopping Cart</li>
+
+      <li>✅ Mobile Friendly</li>
+
+      <li>✅ Installable Mobile App</li>
+
+    </ul>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+
+    <h2>About KUKU Poultry</h2>
+
+    <p>
+      KUKU Poultry App is a smart farming platform
+      built to help poultry farmers manage production,
+      veterinary records, hatcheries, and poultry sales
+      from one simple application.
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <p>
+      © 2025 KUKU Poultry App
+    </p>
+
+    <p>
+      Powered by KUKU Technologies
+    </p>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="app.js"></script>
+
+  <!-- SERVICE WORKER -->
+  <script>
+    if ("serviceWorker" in navigator) {
+
+      navigator.serviceWorker.register("sw.js")
+      .then(() => {
+        console.log("Service Worker Registered");
+      });
+
+    }
+  </script>
+
 </body>
 </html>
