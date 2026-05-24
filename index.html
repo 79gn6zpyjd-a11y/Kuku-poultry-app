@@ -1,214 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>KUKU Poultry App</title>
+<title>KUKU Poultry App</title>
 
-  <!-- PWA -->
-  <link rel="manifest" href="manifest.json">
+<link rel="manifest" href="/manifest.json">
 
-  <meta name="theme-color" content="#ff8c00">
+<meta name="theme-color" content="#ff8c00">
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
+body{
+background:#f7f7f7;
+color:#222;
+}
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.overlay{
+background:rgba(0,0,0,0.6);
+padding:30px;
+border-radius:20px;
+width:100%;
+max-width:500px;
+color:white;
+backdrop-filter:blur(4px);
+}
+
+.logo{
+width:120px;
+height:120px;
+border-radius:30px;
+margin-bottom:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.subtitle{
+font-size:18px;
+margin-bottom:25px;
+line-height:1.5;
+}
+
+.auth-box input{
+width:100%;
+padding:16px;
+margin-bottom:15px;
+border:none;
+border-radius:12px;
+font-size:16px;
+}
+
+.auth-box button{
+width:100%;
+padding:16px;
+margin-bottom:12px;
+border:none;
+border-radius:12px;
+background:#ff8c00;
+color:white;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.dashboard{
+padding:25px;
+display:none;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:16px;
+margin-bottom:18px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.card h2{
+margin-bottom:10px;
+color:#ff8c00;
+}
+
+.list-item{
+padding:12px;
+background:#f4f4f4;
+margin-bottom:10px;
+border-radius:10px;
+}
+
+.map-btn,
+.google-btn{
+display:block;
+text-align:center;
+padding:14px;
+background:#222;
+color:white;
+text-decoration:none;
+border-radius:12px;
+margin-top:12px;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#111;
+color:white;
+margin-top:40px;
+}
+
+@media(max-width:600px){
+h1{
+font-size:32px;
+}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
+<section class="hero">
+<div class="overlay">
 
-    <div class="overlay">
+<img src="icon-512.png" class="logo">
 
-      <h1>🐔 KUKU Poultry App</h1>
+<h1>🐔 KUKU Poultry App</h1>
 
-      <p class="subtitle">
-        Complete Poultry Management & Marketplace System
-      </p>
+<p class="subtitle">
+Complete Poultry Management & Marketplace System
+</p>
 
-      <!-- LOGIN -->
-      <div class="auth-box">
+<div class="auth-box">
 
-        <input
-          type="text"
-          id="username"
-          placeholder="Create Username"
-        >
+<input type="text" id="username" placeholder="Create Username">
 
-        <input
-          type="password"
-          id="password"
-          placeholder="Create Password"
-        >
+<input type="password" id="password" placeholder="Create Password">
 
-        <button onclick="createAccount()">
-          Create Account
-        </button>
+<button onclick="createAccount()">Create Account</button>
 
-        <button onclick="login()">
-          Login
-        </button>
+<button onclick="login()">Login</button>
 
-      </div>
+<button onclick="openDashboard()">
+Open Dashboard
+</button>
 
-      <a href="#dashboard" class="dashboard-link">
-        Open Dashboard
-      </a>
+</div>
 
-    </div>
+</div>
+</section>
 
-  </header>
+<section class="dashboard" id="dashboard">
 
-  <!-- DASHBOARD -->
-  <section id="dashboard" class="dashboard">
+<div class="card">
+<h2>🐔 Farm Overview</h2>
 
-    <h2>KUKU Dashboard</h2>
+<div class="list-item">Total Chickens: 2,450</div>
+<div class="list-item">Eggs Collected Today: 1,230</div>
+<div class="list-item">Feed Remaining: 45 Bags</div>
+<div class="list-item">Vaccination Status: Updated</div>
+</div>
 
-    <div class="cards">
+<div class="card">
+<h2>🩺 Veterinary Doctors</h2>
 
-      <div class="card">
-        <h3>🐣 Hatchery Management</h3>
-        <p>
-          Monitor eggs, chicks, incubation,
-          and hatchery production.
-        </p>
-      </div>
+<div class="list-item">
+Dr. Michael Poultry Vet — +27 71 222 1111
+</div>
 
-      <div class="card">
-        <h3>💊 Veterinary Records</h3>
-        <p>
-          Store vaccination schedules,
-          poultry treatments, and disease records.
-        </p>
-      </div>
+<div class="list-item">
+Dr. Sarah Chicken Specialist — +27 72 555 9999
+</div>
 
-      <div class="card">
-        <h3>🌽 Feed Supplier System</h3>
-        <p>
-          Manage feeds, suppliers,
-          delivery schedules, and stock.
-        </p>
-      </div>
+<div class="list-item">
+Dr. David Livestock Vet — +27 73 444 8888
+</div>
 
-      <div class="card">
-        <h3>🛒 Poultry Marketplace</h3>
-        <p>
-          Buy and sell chickens,
-          eggs, feeds, and farming equipment.
-        </p>
-      </div>
+<a class="google-btn"
+href="https://www.google.com/search?q=poultry+veterinary+doctor+near+me"
+target="_blank">
+Search More Vets on Google
+</a>
 
-    </div>
+</div>
 
-  </section>
+<div class="card">
+<h2>🗺 Poultry Supply Locations</h2>
 
-  <!-- MARKETPLACE -->
-  <section class="marketplace">
+<div class="list-item">
+KUKU Feed Supplier — Johannesburg
+</div>
 
-    <h2>Marketplace Products</h2>
+<div class="list-item">
+Chicken Medicines Store — Pretoria
+</div>
 
-    <div class="market-grid">
+<div class="list-item">
+Egg Packaging Supplier — Cape Town
+</div>
 
-      <div class="product-card">
-        <h3>🐓 Broiler Chickens</h3>
-        <p>Healthy broilers ready for sale.</p>
-        <button>Buy Now</button>
-      </div>
+<a class="map-btn"
+href="https://maps.google.com"
+target="_blank">
+Open Google Maps
+</a>
 
-      <div class="product-card">
-        <h3>🥚 Fresh Eggs</h3>
-        <p>Organic eggs directly from the farm.</p>
-        <button>Order</button>
-      </div>
+</div>
 
-      <div class="product-card">
-        <h3>🌽 Poultry Feed</h3>
-        <p>High quality nutrition for poultry.</p>
-        <button>Purchase</button>
-      </div>
+<div class="card">
+<h2>🛒 Marketplace</h2>
 
-    </div>
+<div class="list-item">
+100 Broilers Available — R95 each
+</div>
 
-  </section>
+<div class="list-item">
+Fresh Eggs — R85 per tray
+</div>
 
-  <!-- FEATURES -->
-  <section class="features">
+<div class="list-item">
+Chicken Feed — R320 per bag
+</div>
+</div>
 
-    <h2>Application Features</h2>
+<div class="card">
+<h2>📈 Business Analytics</h2>
 
-    <ul>
+<div class="list-item">
+Monthly Revenue: R42,000
+</div>
 
-      <li>✅ User Accounts</li>
+<div class="list-item">
+Best Selling Product: Eggs
+</div>
 
-      <li>✅ Secure Login System</li>
+<div class="list-item">
+Customer Orders This Week: 74
+</div>
+</div>
 
-      <li>✅ Poultry Dashboard</li>
+</section>
 
-      <li>✅ Hatchery Tracking</li>
+<footer>
+KUKU Poultry App © 2025
+<br><br>
+Professional Poultry Management Platform
+</footer>
 
-      <li>✅ Veterinary Management</li>
+<script>
 
-      <li>✅ Feed Supplier System</li>
+function createAccount(){
+alert("✅ Account created successfully!");
+}
 
-      <li>✅ Poultry Marketplace</li>
+function login(){
+alert("✅ Login successful!");
+}
 
-      <li>✅ Shopping Cart</li>
+function openDashboard(){
+document.querySelector(".hero").style.display="none";
+document.getElementById("dashboard").style.display="block";
+window.scrollTo(0,0);
+}
 
-      <li>✅ Mobile Friendly</li>
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+navigator.serviceWorker.register('/sw.js')
+.catch(err => console.log(err));
+});
+}
 
-      <li>✅ Installable Mobile App</li>
-
-    </ul>
-
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about">
-
-    <h2>About KUKU Poultry</h2>
-
-    <p>
-      KUKU Poultry App is a smart farming platform
-      built to help poultry farmers manage production,
-      veterinary records, hatcheries, and poultry sales
-      from one simple application.
-    </p>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-
-    <p>
-      © 2025 KUKU Poultry App
-    </p>
-
-    <p>
-      Powered by KUKU Technologies
-    </p>
-
-  </footer>
-
-  <!-- JAVASCRIPT -->
-  <script src="app.js"></script>
-
-  <!-- SERVICE WORKER -->
-  <script>
-    if ("serviceWorker" in navigator) {
-
-      navigator.serviceWorker.register("sw.js")
-      .then(() => {
-        console.log("Service Worker Registered");
-      });
-
-    }
-  </script>
+</script>
 
 </body>
 </html>
