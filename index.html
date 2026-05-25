@@ -6,15 +6,12 @@
 
 <title>KukuLink</title>
 
-<meta name="theme-color" content="#ff9800">
-
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="styles.css">
 
-<link rel="icon" href="icons/icon-192.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<meta name="theme-color" content="#ff9800">
 
 <script defer src="app.js"></script>
 </head>
@@ -23,17 +20,14 @@
 
 <!-- SPLASH SCREEN -->
 
-<div id="splash">
+<div id="splash-screen">
 
-    <div class="splash-logo">
-        <img src="assets/logo.png" alt="KukuLink">
-    </div>
+    <img src="assets/logo.png" alt="KukuLink Logo">
 
     <h1>KukuLink</h1>
 
     <p>
-        Smart Poultry Marketplace,
-        Veterinary & Farm Management Platform
+        Smart Poultry Marketplace & Social Farming Platform
     </p>
 
 </div>
@@ -42,11 +36,11 @@
 
 <div id="app">
 
-<!-- TOP NAV -->
+<!-- TOP HEADER -->
 
-<header class="topbar">
+<header class="top-header">
 
-    <div class="logo-area">
+    <div class="logo-wrap">
 
         <img src="assets/logo.png">
 
@@ -54,13 +48,9 @@
 
     </div>
 
-    <div class="top-icons">
+    <div class="header-icons">
 
-        <button onclick="openSearch()">🔍</button>
-
-        <button onclick="openNotifications()">🔔</button>
-
-        <button onclick="openMenu()">☰</button>
+        <button onclick="toggleMenu()">☰</button>
 
     </div>
 
@@ -68,23 +58,17 @@
 
 <!-- SIDE MENU -->
 
-<div id="sideMenu">
-
-    <div class="menu-header">
-
-        <img src="assets/logo.png">
-
-        <h2>KukuLink</h2>
-
-    </div>
+<div id="side-menu">
 
     <a href="#home">🏠 Home</a>
+
+    <a href="#feed">📱 Feed</a>
 
     <a href="#market">🛒 Marketplace</a>
 
     <a href="#vet">🩺 Veterinary</a>
 
-    <a href="#gps">📍 GPS Farms</a>
+    <a href="#gps">📍 GPS</a>
 
     <a href="#calendar">📅 Calendar</a>
 
@@ -92,18 +76,16 @@
 
     <a href="#profile">👤 Profile</a>
 
-    <a href="#about">ℹ About</a>
-
 </div>
 
 <!-- HERO -->
 
 <section class="hero" id="home">
 
-    <div class="hero-overlay">
+    <div class="hero-content">
 
         <h1>
-            Welcome to
+            Welcome To
             <span>KukuLink</span>
         </h1>
 
@@ -113,11 +95,11 @@
 
         <div class="hero-buttons">
 
-            <button onclick="openRegister()">
+            <button>
                 Create Account
             </button>
 
-            <button onclick="openLogin()">
+            <button>
                 Login
             </button>
 
@@ -129,35 +111,35 @@
 
 <!-- SEARCH -->
 
-<section class="search-section">
+<section class="search-area">
 
     <input
         type="text"
-        placeholder="Search farms, vets, feeds, medicines..."
+        placeholder="Search farmers, feeds, medicines..."
     >
 
 </section>
 
 <!-- QUICK ACTIONS -->
 
-<section class="quick-actions">
+<section class="quick-grid">
 
-    <div class="action-card">
+    <div class="quick-card">
         🐔
         <span>Farm</span>
     </div>
 
-    <div class="action-card">
+    <div class="quick-card">
         💊
         <span>Medicine</span>
     </div>
 
-    <div class="action-card">
+    <div class="quick-card">
         🩺
         <span>Doctors</span>
     </div>
 
-    <div class="action-card">
+    <div class="quick-card">
         🥚
         <span>Hatchery</span>
     </div>
@@ -166,39 +148,42 @@
 
 <!-- SOCIAL FEED -->
 
-<section class="feed-section">
+<section class="feed-section" id="feed">
 
 <h2>Community Feed</h2>
 
-<div class="post-card">
+<div class="feed-card">
 
-    <div class="post-top">
+    <div class="feed-top">
 
         <img src="assets/logo.png">
 
         <div>
+
             <h3>Brian Poultry Farm</h3>
+
             <p>2 mins ago</p>
+
         </div>
 
     </div>
 
     <img
-        class="post-image"
+        class="feed-image"
         src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7"
     >
 
-    <p class="post-text">
+    <p>
         Successfully vaccinated 500 chicks today 🚀
     </p>
 
-    <div class="post-actions">
+    <div class="feed-actions">
 
-        <button>❤️ 2.3k</button>
+        <button>❤️ Like</button>
 
-        <button>💬 410</button>
+        <button>💬 Comment</button>
 
-        <button>🔄 Share</button>
+        <button>📤 Share</button>
 
     </div>
 
@@ -208,7 +193,7 @@
 
 <!-- MARKETPLACE -->
 
-<section class="marketplace" id="market">
+<section class="market-section" id="market">
 
 <h2>Marketplace</h2>
 
@@ -216,9 +201,9 @@
 
 <div class="market-card">
 
-    <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b">
+    <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a">
 
-    <h3>Chicken Feed</h3>
+    <h3>Broiler Chickens</h3>
 
     <p>$25</p>
 
@@ -228,11 +213,11 @@
 
 <div class="market-card">
 
-    <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a">
+    <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b">
 
-    <h3>Vaccines</h3>
+    <h3>Poultry Feed</h3>
 
-    <p>$18</p>
+    <p>$15</p>
 
     <button>Order</button>
 
@@ -250,13 +235,19 @@
 
 <div class="vet-card">
 
-    <h3>Dr. Sarah K.</h3>
+    <h3>Dr. Sarah Poultry Vet</h3>
 
-    <p>Poultry Specialist</p>
+    <p>Vaccination & Disease Specialist</p>
 
-    <button>Email</button>
+    <div class="vet-buttons">
 
-    <button>Call</button>
+        <button>Email</button>
+
+        <button>Call</button>
+
+        <button>WhatsApp</button>
+
+    </div>
 
 </div>
 
@@ -266,11 +257,26 @@
 
 <section class="gps-section" id="gps">
 
-<h2>GPS Farm Locations</h2>
+<h2>GPS Farm Tracking</h2>
 
-<div class="map-placeholder">
+<div class="gps-card">
 
-📍 Google Maps Integration Coming Soon
+    📍 Google Maps Integration Ready
+
+</div>
+
+</section>
+
+<!-- CALENDAR -->
+
+<section class="calendar-section" id="calendar">
+
+<h2>Farm Calendar</h2>
+
+<div class="calendar-card">
+
+    📅 Vaccination Reminder:
+    Tomorrow 9:00AM
 
 </div>
 
@@ -278,11 +284,11 @@
 
 <!-- PAYMENTS -->
 
-<section class="payments" id="payments">
+<section class="payment-section" id="payments">
 
 <h2>Payments</h2>
 
-<div class="payment-box">
+<div class="payment-grid">
 
 <button>MTN Mobile Money</button>
 
@@ -296,16 +302,19 @@
 
 </section>
 
-<!-- CALENDAR -->
+<!-- PROFILE -->
 
-<section class="calendar-section" id="calendar">
+<section class="profile-section" id="profile">
 
-<h2>Farm Calendar</h2>
+<h2>User Profile</h2>
 
-<div class="calendar-box">
+<div class="profile-card">
 
-📅 Vaccination:
-Tomorrow 9AM
+    <img src="assets/logo.png">
+
+    <h3>Farmer Account</h3>
+
+    <p>Verified Poultry Farmer</p>
 
 </div>
 
@@ -318,11 +327,12 @@ Tomorrow 9AM
 <h2>KukuLink</h2>
 
 <p>
-Connecting Farmers, Veterinarians,
-Suppliers & Buyers Across Africa.
+Connecting Farmers, Suppliers,
+Veterinarians & Buyers
+Across Africa.
 </p>
 
-<div class="socials">
+<div class="social-icons">
 
 <a href="https://facebook.com">📘</a>
 
