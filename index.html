@@ -7,252 +7,278 @@
 
 <title>KukuLink</title>
 
-<link rel="stylesheet" href="styles.css">
 <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
 
 <meta name="theme-color" content="#ff9800">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<script defer src="app.js"></script>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
 <body>
 
-<!-- SPLASH -->
+<!-- SPLASH SCREEN -->
 
-<div id="splash">
-
-<img src="assets/logo.png">
-
+<div class="splash-screen">
+<img src="icon-512.png" class="splash-logo">
 <h1>KukuLink</h1>
-
-<p>
-Africa's Smart Poultry Platform
-</p>
-
+<p>Smart Poultry Social Marketplace</p>
 </div>
-
-<!-- MAIN APP -->
-
-<div id="app">
 
 <!-- HEADER -->
 
 <header>
 
-<div class="logo">
+<div class="topbar">
 
-<img src="assets/logo.png">
+<div class="brand">
 
-<span>KukuLink</span>
+<img src="icon-512.png">
+
+<div>
+<h2>KukuLink</h2>
+<span>Farm • Vet • Market • Social</span>
+</div>
 
 </div>
 
-<button id="menuBtn">☰</button>
+<div class="menu-btn">
+<i class="fas fa-bars"></i>
+</div>
+
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#feed">Feed</a>
+<a href="#market">Marketplace</a>
+<a href="#vets">Veterinary</a>
+<a href="#gps">GPS</a>
+<a href="#payments">Payments</a>
+<a href="#profile">Profile</a>
+
+</nav>
 
 </header>
 
-<!-- MENU -->
-
-<div id="menu">
-
-<a href="#">🏠 Home</a>
-<a href="#">🛒 Marketplace</a>
-<a href="#">🩺 Veterinary</a>
-<a href="#">📅 Calendar</a>
-<a href="#">💳 Payments</a>
-<a href="#">👤 Profile</a>
-
-</div>
-
 <!-- HERO -->
 
-<section class="hero">
-
-<div class="overlay">
+<section class="hero" id="home">
 
 <h1>
-Modern Poultry Farming
+Africa’s Modern Poultry Super App
 </h1>
 
 <p>
-Connect Farmers, Veterinarians,
-Suppliers & Buyers.
+Connect farmers, veterinarians, hatcheries,
+suppliers and poultry buyers in one platform.
 </p>
 
-<div class="heroButtons">
+<div class="hero-buttons">
 
-<button>Create Account</button>
+<button onclick="openRegister()">
+Create Account
+</button>
 
-<button>Login</button>
-
-</div>
+<button onclick="openLogin()">
+Login
+</button>
 
 </div>
 
 </section>
 
-<!-- SEARCH -->
+<!-- STATS -->
 
-<section class="search">
+<section class="stats">
 
-<input
-type="text"
-placeholder="Search chickens, feeds, medicines..."
->
+<div class="stat-card">
+<h2>15K+</h2>
+<p>Farmers</p>
+</div>
+
+<div class="stat-card">
+<h2>620+</h2>
+<p>Veterinarians</p>
+</div>
+
+<div class="stat-card">
+<h2>9K+</h2>
+<p>Suppliers</p>
+</div>
 
 </section>
 
-<!-- QUICK MENU -->
+<!-- SOCIAL FEED -->
 
-<section class="quick">
+<h2 class="section-title">Community Feed</h2>
 
-<div class="box">
-🐔
-<span>Farm</span>
+<section class="feed-section" id="feed">
+
+<div class="post">
+
+<div class="post-top">
+<img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=300">
+<div>
+<h3>Brian Poultry Farm</h3>
+<span>2 mins ago</span>
+</div>
 </div>
 
-<div class="box">
-💊
-<span>Medicine</span>
+<p>
+Successfully vaccinated 500 chicks today 🐣
+</p>
+
+<div class="post-actions">
+<button><i class="fas fa-heart"></i> Like</button>
+<button><i class="fas fa-comment"></i> Comment</button>
+<button><i class="fas fa-share"></i> Share</button>
 </div>
 
-<div class="box">
-🩺
-<span>Doctors</span>
 </div>
 
-<div class="box">
-🥚
-<span>Hatchery</span>
+<div class="post">
+
+<div class="post-top">
+<img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=300">
+<div>
+<h3>Golden Hatchery</h3>
+<span>12 mins ago</span>
+</div>
+</div>
+
+<p>
+New hatchery machines available for sale.
+</p>
+
+<div class="post-actions">
+<button><i class="fas fa-heart"></i> Like</button>
+<button><i class="fas fa-comment"></i> Comment</button>
+<button><i class="fas fa-share"></i> Share</button>
+</div>
+
 </div>
 
 </section>
 
 <!-- MARKETPLACE -->
 
-<section class="market">
+<h2 class="section-title">Marketplace</h2>
 
-<h2>Marketplace</h2>
-
-<div class="marketGrid">
-
-<!-- ITEM -->
-
-<div class="item">
-
-<img src="https://cdn-icons-png.flaticon.com/512/3069/3069172.png">
-
-<h3>Broiler Chickens</h3>
-
-<p>$40</p>
-
-<button>Buy</button>
-
-</div>
-
-<!-- ITEM -->
-
-<div class="item">
-
-<img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png">
-
-<h3>Fresh Eggs</h3>
-
-<p>$12</p>
-
-<button>Order</button>
-
-</div>
-
-<!-- ITEM -->
-
-<div class="item">
-
-<img src="https://cdn-icons-png.flaticon.com/512/2909/2909763.png">
-
-<h3>Chicken Feed</h3>
-
-<p>$25</p>
-
-<button>Shop</button>
-
-</div>
-
-<!-- ITEM -->
-
-<div class="item">
-
-<img src="https://cdn-icons-png.flaticon.com/512/616/616408.png">
-
-<h3>Chicks</h3>
-
-<p>$8</p>
-
-<button>Buy</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FEED -->
-
-<section class="feed">
-
-<h2>Community Feed</h2>
+<section class="cards-grid" id="market">
 
 <div class="card">
 
-<div class="top">
+<img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=600">
 
-<img src="assets/logo.png">
+<h3>Vaccines</h3>
 
-<div>
+<p>
+Premium poultry vaccines available.
+</p>
 
-<h3>Kuku Farmer</h3>
-
-<small>2 mins ago</small>
-
-</div>
-
-</div>
-
-<div class="content">
-
-Welcome to KukuLink —
-the future of poultry farming.
+<a href="https://google.com">
+Order
+</a>
 
 </div>
 
-<div class="actions">
+<div class="card">
 
-<button>❤️</button>
-<button>💬</button>
-<button>📤</button>
+<img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=600">
+
+<h3>Chicken Feed</h3>
+
+<p>
+Broiler and layer feeds available.
+</p>
+
+<a href="https://google.com">
+Buy Now
+</a>
 
 </div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=600">
+
+<h3>Live Chickens</h3>
+
+<p>
+Buy and sell poultry directly.
+</p>
+
+<a href="https://google.com">
+Explore
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=600">
+
+<h3>Incubators</h3>
+
+<p>
+Modern hatchery systems available.
+</p>
+
+<a href="https://google.com">
+View
+</a>
 
 </div>
 
 </section>
 
-<!-- VET -->
+<!-- VETERINARY -->
 
-<section class="vet">
+<h2 class="section-title">Veterinary Services</h2>
 
-<h2>Veterinary Services</h2>
+<section class="cards-grid" id="vets">
 
-<div class="vetCard">
+<div class="vet-box">
 
-<h3>Dr Sarah</h3>
+<h3>Dr. Sarah K.</h3>
 
-<p>Poultry Specialist</p>
+<p>Poultry Disease Specialist</p>
 
-<button>Contact</button>
+<div class="vet-buttons">
+
+<a href="tel:+256700000000">
+Call
+</a>
+
+<a href="mailto:doctor@kukulink.com">
+Email
+</a>
+
+</div>
+
+</div>
+
+<div class="vet-box">
+
+<h3>Emergency Vet</h3>
+
+<p>24/7 Poultry Assistance</p>
+
+<div class="vet-buttons">
+
+<a href="tel:+256700000000">
+Call
+</a>
+
+<a href="mailto:help@kukulink.com">
+Email
+</a>
+
+</div>
 
 </div>
 
@@ -260,21 +286,82 @@ the future of poultry farming.
 
 <!-- PAYMENTS -->
 
-<section class="payments">
+<h2 class="section-title">Payments</h2>
 
-<h2>Payments</h2>
+<section class="payments" id="payments">
 
-<div class="payBtns">
-
-<button>MTN MoMo</button>
-
-<button>Airtel Money</button>
-
-<button>Visa</button>
-
-<button>PayPal</button>
-
+<div class="payment-card">
+MTN Mobile Money
 </div>
+
+<div class="payment-card">
+Airtel Money
+</div>
+
+<div class="payment-card">
+Visa / Mastercard
+</div>
+
+<div class="payment-card">
+PayPal
+</div>
+
+</section>
+
+<!-- GPS -->
+
+<h2 class="section-title">Farm GPS</h2>
+
+<section class="gps-section" id="gps">
+
+<p>
+Locate farms and suppliers using GPS.
+</p>
+
+<button onclick="window.open('https://maps.google.com')">
+Open Google Maps
+</button>
+
+</section>
+
+<!-- CALENDAR -->
+
+<h2 class="section-title">Farm Calendar</h2>
+
+<section class="calendar-box">
+
+<div class="calendar-item">
+🐣 Vaccination — Tomorrow 9AM
+</div>
+
+<div class="calendar-item">
+💊 Feed Delivery — Friday
+</div>
+
+<div class="calendar-item">
+🚚 Chicken Delivery — Monday
+</div>
+
+</section>
+
+<!-- PROFILE -->
+
+<h2 class="section-title">Farmer Profile</h2>
+
+<section class="profile-box" id="profile">
+
+<img src="icon-512.png">
+
+<h3>Verified Farmer Account</h3>
+
+<p>
+Upload National ID and Farm License
+for verification badge.
+</p>
+
+<button>
+Upload Documents
+</button>
 
 </section>
 
@@ -285,36 +372,85 @@ the future of poultry farming.
 <h2>KukuLink</h2>
 
 <p>
-Africa's Poultry Marketplace
+Connecting Farmers, Veterinarians,
+Suppliers & Buyers Across Africa.
 </p>
 
 <div class="socials">
 
-<a href="#">📘</a>
-<a href="#">📸</a>
-<a href="#">🎵</a>
+<a href="https://facebook.com">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a href="https://instagram.com">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://tiktok.com">
+<i class="fab fa-tiktok"></i>
+</a>
+
+<a href="https://youtube.com">
+<i class="fab fa-youtube"></i>
+</a>
 
 </div>
 
 </footer>
 
-<!-- NAV -->
+<!-- LOGIN MODAL -->
 
-<nav>
+<div class="modal" id="loginModal">
 
-<button>🏠</button>
+<div class="modal-content">
 
-<button>🛒</button>
+<h2>Login</h2>
 
-<button>➕</button>
+<input type="email" placeholder="Email">
 
-<button>🔔</button>
+<input type="password" placeholder="Password">
 
-<button>👤</button>
+<button>Login</button>
 
-</nav>
+<button onclick="closeLogin()" class="close-btn">
+Close
+</button>
 
 </div>
+
+</div>
+
+<!-- REGISTER MODAL -->
+
+<div class="modal" id="registerModal">
+
+<div class="modal-content">
+
+<h2>Create Account</h2>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<input type="date">
+
+<input type="text" placeholder="Location">
+
+<input type="password" placeholder="Password">
+
+<button>
+Send OTP
+</button>
+
+<button onclick="closeRegister()" class="close-btn">
+Close
+</button>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
 
 </body>
 </html>
