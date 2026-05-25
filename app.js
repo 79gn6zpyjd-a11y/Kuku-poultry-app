@@ -1,51 +1,34 @@
-
-let currentUser = localStorage.getItem('kukuUser');
-
-if(currentUser){
-document.getElementById('welcomeText').innerText = 'Welcome ' + currentUser;
+function openDashboard() {
+  document.querySelector(".hero").style.display = "none";
+  document.querySelector(".main-app").style.display = "block";
 }
 
-function createAccount(){
-const username = document.getElementById('username').value;
-const password = document.getElementById('password').value;
-
-if(username && password){
-localStorage.setItem('kukuUser', username);
-localStorage.setItem('kukuPass', password);
-alert('Account created successfully!');
-}
-else{
-alert('Enter username and password');
-}
+function createAccount() {
+  alert("✅ Account created successfully!");
 }
 
-function login(){
-const username = document.getElementById('username').value;
-const password = document.getElementById('password').value;
-
-const savedUser = localStorage.getItem('kukuUser');
-const savedPass = localStorage.getItem('kukuPass');
-
-if(username === savedUser && password === savedPass){
-document.getElementById('welcomeText').innerText = 'Welcome ' + username;
-alert('Login successful!');
-}
-else{
-alert('Wrong login details');
-}
+function login() {
+  alert("✅ Login successful!");
 }
 
-function addToCart(item){
-const list = document.getElementById('cartItems');
-const li = document.createElement('li');
-li.innerText = item;
-list.appendChild(li);
+function likePost(btn) {
+  btn.innerHTML = "❤️ Liked";
 }
 
-function googleSearch(){
-const query = document.getElementById('searchInput').value;
-
-if(query){
-window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank');
+function openPayment() {
+  document.getElementById("paymentModal").style.display = "flex";
 }
+
+function closePayment() {
+  document.getElementById("paymentModal").style.display = "none";
+}
+
+function sendNotification() {
+  alert("🔔 Notification sent!");
+}
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js");
+  });
 }
