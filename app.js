@@ -1,34 +1,6 @@
-function openDashboard() {
-  document.querySelector(".hero").style.display = "none";
-  document.querySelector(".main-app").style.display = "block";
-}
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
 
-function createAccount() {
-  alert("✅ Account created successfully!");
-}
-
-function login() {
-  alert("✅ Login successful!");
-}
-
-function likePost(btn) {
-  btn.innerHTML = "❤️ Liked";
-}
-
-function openPayment() {
-  document.getElementById("paymentModal").style.display = "flex";
-}
-
-function closePayment() {
-  document.getElementById("paymentModal").style.display = "none";
-}
-
-function sendNotification() {
-  alert("🔔 Notification sent!");
-}
-
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/sw.js");
-  });
-}
+menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
