@@ -1,15 +1,18 @@
-const CACHE_NAME = "kuku-cache-v1";
+const CACHE_NAME = "kukulink-v1";
 
 const urlsToCache = [
   "/",
   "/index.html",
-  "/icon-512.png"
+  "/styles.css",
+  "/app.js"
 ];
 
 self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+      .then(cache => {
+        return cache.addAll(urlsToCache);
+      })
   );
 });
 
